@@ -1,0 +1,40 @@
+version: '3'
+services:
+  cloud-application-config:
+    image: cloud-application/cloud-application-config
+    ports:
+    - "8081:8081"
+  cloud-application-discovery:
+    image: cloud-application/cloud-application-discovery
+    depends_on:
+    - cloud-application-config
+    ports:
+    - "8082:8082"
+  cloud-application-gateway:
+    image: cloud-application/cloud-application-gateway
+    depends_on:
+    - cloud-application-discovery
+    ports:
+    - "8080:8080"
+  cloud-application-db:
+    image: mysql/mysql-server
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: application
+      MYSQL_USER: medium
+      MYSQL_PASSWORD: 1234
+      MYSQL_ROOT_HOST: '%'
+    ports:
+    - "3306:3306"
+  cloud-application-oauth2-authorization-server:
+    image: cloud-application/cloud-application-oauth2-authorization-server
+    depends_on:
+    - cloud-application-discovery
+    ports:
+    - "8083:8083"
+  cloud-application-microservice-one:
+    image: cloud-application/cloud-application-microservice-one
+    depends_on:
+      - cloud-application-discovery
+    ports:
+      - "8084:8084"
