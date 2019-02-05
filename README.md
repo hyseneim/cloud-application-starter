@@ -29,6 +29,9 @@ docker-compose up cloud-application-microservice-one
 ```
 
 ### After Start
-Use Postman collection to enjoy services! :D
+Install Postman and import my collection of services (placed on root of the project).
+Request access token and use it to call the hello world service :)
+
+Enjoy! :D
 
 

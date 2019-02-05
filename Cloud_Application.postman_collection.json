@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "2fb912df-4563-4562-8fc3-399f63a37aaf",
+		"name": "Cloud Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Environment - Local",
+			"item": [
+				{
+					"name": "http://localhost:8080/oauth2-authorization-service/oauth/token?grant_type=password&password=1234&username=test",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "medium",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "medium",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/oauth2-authorization-service/oauth/token?grant_type=password&password=1234&username=test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oauth2-authorization-service",
+								"oauth",
+								"token"
+							],
+							"query": [
+								{
+									"key": "grant_type",
+									"value": "password"
+								},
+								{
+									"key": "password",
+									"value": "1234"
+								},
+								{
+									"key": "username",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/microservice-one/hello-world",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0IiwidXNlcl9uYW1lIjoidGVzdCIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJvcmdhbml6YXRpb24iOiJIeXNlbmVpbSBJbmMuIiwiZXhwIjoxNTQ5NDIwNTM3LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiYTVmZmRjYTMtZThiZS00NzIxLTllOTEtMDBhM2Y0OTRmMzYyIiwiY2xpZW50X2lkIjoibWVkaXVtIn0.OJC9ylYqrEMIVKBQS2TOVPAqgmFuQJKxglcpLpikQA8MthGNAKt-CPe48ibMRG2C5jrnMx-X6tm7gOf0ITEfvA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/microservice-one/hello-world",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"microservice-one",
+								"hello-world"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
