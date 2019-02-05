@@ -1,4 +1,4 @@
-# Cloud Application (Spring Cloud + AAP)
+# Cloud Application Starter: Spring Cloud + AAP + MySQL
 
 ### Requirement
 
