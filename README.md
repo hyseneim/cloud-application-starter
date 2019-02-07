@@ -1,4 +1,4 @@
-# Cloud Application Starter: Spring Cloud + Authenticatin & Authorization Provider (AAP)
+# Cloud Application Starter: Spring Cloud + Authentication & Authorization Provider (AAP)
 
 ### Requirements
 
