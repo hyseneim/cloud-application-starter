@@ -1,6 +1,6 @@
-# Cloud Application Starter: Spring Cloud + AAP + MySQL
+# Cloud Application Starter: Spring Cloud + Authenticatin & Authorization Provider (AAP)
 
-### Requirement
+### Requirements
 
 - [Oracle Java SE Development Kit 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
@@ -8,7 +8,7 @@
 
 - [Docker v [3.5.3]](https://docs.docker.com/install/#supported-platforms)
 
-### Configuration
+### Configurations
 On root project:
 ```shell 
 mvn clean install -DskipTests
