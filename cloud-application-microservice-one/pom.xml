@@ -10,9 +10,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<groupId>it.hyseneim</groupId>
 	<artifactId>cloud-application-microservice-one</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<name>cloud-application-microservice-one</name>
 
 	<properties>
 		<start-class>

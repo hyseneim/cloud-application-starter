@@ -10,5 +10,6 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>cloud-application-common</artifactId>
-
+	<version>0.0.1-SNAPSHOT</version>
+	<name>cloud-application-common</name>
 </project>
