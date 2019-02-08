@@ -6,7 +6,7 @@
 
 - [Maven v [3.5.3]](http://maven.apache.org/download.cgi)
 
-- [Docker v [3.5.3]](https://docs.docker.com/install/#supported-platforms)
+- [Docker v [17.x/18.x]](https://docs.docker.com/install/#supported-platforms)
 
 ### Configurations
 On root project:
@@ -20,12 +20,12 @@ mvn package dockerfile:build -f "$MODULE_NAME"
 
 ### Start
 ```shell 
-docker-compose up cloud-application-db
-docker-compose up cloud-application-config
-docker-compose up cloud-application-discovery
-docker-compose up cloud-application-gateway
-docker-compose up cloud-application-oauth2-authorization-server
-docker-compose up cloud-application-microservice-one
+docker-compose up -d cloud-application-db
+docker-compose up -d cloud-application-config
+docker-compose up -d cloud-application-discovery
+docker-compose up -d cloud-application-gateway
+docker-compose up -d cloud-application-oauth2-authorization-server
+docker-compose up -d cloud-application-microservice-one
 ```
 
 ### After Start
