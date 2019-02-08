@@ -10,7 +10,7 @@
 	</parent>
 
 	<artifactId>cloud-application-oauth2-authorization-server</artifactId>
-
+	<version>0.0.1-SNAPSHOT</version>
 	<name>cloud-application-oauth2-authorization-server</name>
 
 	<properties>

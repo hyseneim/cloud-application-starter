@@ -8,6 +8,7 @@
 		<artifactId>cloud-application</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+
 	<artifactId>cloud-application-discovery</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cloud-application-discovery</name>
