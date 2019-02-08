@@ -62,6 +62,19 @@ cloud-application/cloud-application-config                        latest        
 ```
 
 ### Start
+After the build phase of the project (including docker images) you can start the 
+entire project using [docker-compose](https://docs.docker.com/compose/).
+
+Before running the project using docker-compose, verify that the following 
+TCP/IP ports are not already allocated by other services on your workstation.
+
+1. 0.0.0.0:3306 used by the service cloud-application-db
+2. 0.0.0.0:8081 used by the service cloud-application-config
+3. 0.0.0.0:8082 used by the service cloud-application-discovery
+4. 0.0.0.0:8080 used by the service cloud-application-gateway
+5. 0.0.0.0:8084 used by the service cloud-application-microservice-one
+6. 0.0.0.0:8083 used by the service cloud-application-oauth2-authorization-server
+
 ```shell 
 docker-compose up -d cloud-application-db
 docker-compose up -d cloud-application-config
@@ -70,6 +83,29 @@ docker-compose up -d cloud-application-gateway
 docker-compose up -d cloud-application-oauth2-authorization-server
 docker-compose up -d cloud-application-microservice-one
 ```
+
+After starting all the services, you can check the status of each one, 
+execute the following command.
+
+```shell
+docker-compose ps
+```
+
+You should get a result like this. I expect all services to be in UP state.
+
+
+```shell
+                                  Name                                                 Command                  State                     Ports              
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+cloud-application-starter_cloud-application-config_1                        java -Djava.security.egd=f ...   Up             0.0.0.0:8081->8081/tcp           
+cloud-application-starter_cloud-application-db_1                            /entrypoint.sh mysqld            Up (healthy)   0.0.0.0:3306->3306/tcp, 33060/tcp
+cloud-application-starter_cloud-application-discovery_1                     java -Djava.security.egd=f ...   Up             0.0.0.0:8082->8082/tcp           
+cloud-application-starter_cloud-application-gateway_1                       java -Djava.security.egd=f ...   Up             0.0.0.0:8080->8080/tcp           
+cloud-application-starter_cloud-application-microservice-one_1              java -Djava.security.egd=f ...   Up             0.0.0.0:8084->8084/tcp           
+cloud-application-starter_cloud-application-oauth2-authorization-server_1   java -Djava.security.egd=f ...   Up             0.0.0.0:8083->8083/tcp           
+```
+
+In case you want to see the service log, just run the command `docker-compose logs -f`
 
 ### After Start
 Install Postman and import my collection (Cloud_Application.postman_collection.json) of services placed on root of the project.
